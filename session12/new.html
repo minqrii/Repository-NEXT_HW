@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="title">자바스크립트는 근본이 없군요</h1>
+    <button>그렇다면,</button>
+
+    <h1>버튼을 바꿔보자!</h1>
+    <button>눌러주세요!</button>
+    <button>눌러주세요!</button>
+    <button>눌러주세요!</button>
+    <button>눌러주세요!</button>
+    <button>눌러주세요!</button>
+    <style>
+        .red{
+            color: red;
+        }
+
+    </style>
+
+    <script>
+        const title = document.querySelector(".title");
+        const button = document.querySelectorAll("button");
+
+        for (let i=0 ; i < button.length; i++) {
+        button[i].addEventListener("click", function(event) {
+            button[i].textContent = "짜잔"
+        })
+        }
+
+        // const onMouseOver = (event) => (event.target.style.color = "red");
+        // const onMouseOut = (event) => (event.target.style.color = "black");
+
+        
+        // title.addEventListener("mouseover", function (event) {
+        //     title.classList.add("red");
+        // });
+
+        // title.addEventListener("mouseout", function (event) {
+        //     title.classList.remove("red");
+        // });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ex1.css">
+    <title>Awesome</title>
+</head>
+<body>
+    <div id="myDIV" class="header">
+        <h2>Awesome To Do List</h2>
+        <div class="inputBox">
+            <input type="text" id="myInput" placeholder="Title...">
+            <button onclick="newElement()" class="addBtn">Add</button>
+        </div>
+        <button onclick="modalopen()" id="ModalBtn">
+            Open Modal
+        </button>
+        <button onclick="darkmode()" class="darkmode">Dark Mode</button>
+    </div>
+      
+    <ul id="myUL">
+        <li>
+            <span>Happy Coding :)</span>
+            <span class="close">&#215;</span>
+        </li>
+    </ul>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <div class="modal-header">    
+                <span class="close"" id="close">&times;</span>
+                <h3>모달모달</h3>
+            </div>
+            <div class="modal-body">
+                <p>I want to be a Modal</p>
+            </div>
+            <div class="modal-footer">
+                <h4>ㅁㄴㅇㄹㅁㄴㅇㄹ</h4>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="ex1-answer.js"></script>
+<!-- <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+<script>
+
+    var sf = new Snowflakes();
+    
+</script>  -->
+</html>

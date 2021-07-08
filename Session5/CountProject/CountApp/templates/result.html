@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'result.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+    <div class="text">"{{text}}"</div> <br>
+    <div class="countresult">글자수: {{total_len}} <br>
+    공백 제외 글자수: {{total_len_without_blank}} <br>
+    단어수: {{word_len}}</div>
+    </p>
+    <div class="ending">
+        <span>오이를 사랑합니다...</span>
+        <img src="https://media.mercola.com/imageserver/public/2018/may/cucumber-saag.jpg" alt="">
+        <p>오이는 95%의 물로 이루어져 있어 이상적으로 (체내) 수분을 공급하며 차가운 음식과 잘 어울립니다 <br>
+            오이는 뇌의 건강에 중요한 역할을 하는 피세틴(fisetin)이라는 항염증성 플라보놀을 함유하고 있습니다 <br>
+            오이는 또한 유방암, 자궁암, 난소암, 전립선암의 위험을 낮추는 데 도움이 되는 리그난(lignan)으로 불리는 폴리페놀을 함유하고 있습니다 <br>
+            오이 추출물은 전염증성 효소(시클로-옥시게나아제 2 또는 COX-2)의 활성을 부분적으로 억제하여 불필요한 염증을 줄이는 데 도움이 됩니다 <br>
+            오이는 칼로리가 낮고 섬유질 함량이 높기 때문에 체중 감량과 소화 건강에 유용합니다</p>
+    </div>
+
+</body>
+</html>

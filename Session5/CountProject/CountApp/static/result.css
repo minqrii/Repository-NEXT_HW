@@ -1,0 +1,37 @@
+body{
+    font-family: 'Nanum Gothic Coding', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    text-align: center;
+}
+.text{
+    width: 80%;
+    height: auto;
+    padding: 50px;
+    border: solid 4px #59a63c;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.countresult{
+    font-size: 150%;
+    font-weight: bold;
+    line-height: 300%;
+}
+.ending{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    opacity: 40%;
+    color: #59a63c;
+}
+.ending span{
+    font-size: 150%;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.ending p{
+    line-height: 200%;
+}

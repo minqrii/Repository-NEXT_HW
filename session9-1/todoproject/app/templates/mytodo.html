@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'mytodo.css' %}">
+{% endblock css%}
+
+{% block tit %}
+<span>My To-Do.</span> <br>
+<div class="new-tag">
+<a href="{% url 'new'%}">Create New</a>
+</div>
+{% endblock tit %}
+
+{% block main %}
+
+<div class="list_wrapper">
+{% for todo in mytodos %}
+    <li>
+    <div class="list-item">
+        <a href="{% url 'detail' todo.pk %}">{{ todo.title }}</a>
+        <p><strong>Until</strong>  {{ todo.date_deadline }}</p>
+        <p><strong>D-</strong>{{ todo.remaining }}</p>
+    </div>
+    </li>
+        
+{% endfor %}
+</div>
+
+{% endblock main %}

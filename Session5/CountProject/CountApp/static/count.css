@@ -1,0 +1,31 @@
+body{
+    font-family: 'Nanum Gothic Coding', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    background-color: #59a63c;
+    color: #ffe706;
+}
+input[type=submit]{
+    background-color: #ffe706;
+    color: #59a63c;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+textarea{
+    border: solid 10px #ffe706;
+}
+.box_wrapper{
+    display: flex;
+    flex-wrap: inherit;
+    
+}
+img{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+}

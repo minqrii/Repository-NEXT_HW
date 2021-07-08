@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topbanner">
+        <h1>Minkyu's Blog</h1> 
+    </div>
+    <div class="categorybox">
+        <div class="box">
+            <span class="category_tit">Drama</span>
+            <img src="https://www.hola.com/imagenes/actualidad/20200312162977/personaje-infiltrado-casa-papel-gt/0-797-491/casa-z.jpg" alt="">
+            <span>Posts : </span> <span>{{ drama_count }}</span> 
+            <a href="{% url 'drama' %}">Learn More</a>
+        </div>
+        <div class="box">
+            <span class="category_tit">Movie</span>
+            <img src="http://t1.daumcdn.net/movie/4dad584812017cf17d93baf5f7d573bbb9233b93" alt="">
+            <span>Posts : {{ movie_count }}</span>
+            <a href="{% url 'movie' %}">Learn More</a>
+        </div>
+        <div class="box">
+            <span class="category_tit">Programming</span>
+            <img src="https://cdn-apply.likelion.org/static/imgs/basiclogo_E_V.png" alt="">
+            <span>Posts : {{ programming_count }}</span>
+            <a href="{% url 'programming' %}">Learn More</a>
+        </div>
+    </div>
+
+</body>
+</html>

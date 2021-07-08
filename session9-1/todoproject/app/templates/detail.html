@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'detail.css' %}">
+{% endblock css%}
+
+{% block tit %}
+<span>#{{ todo.pk }}.</span>
+{% endblock tit %}
+
+{% block main %}
+<div class="todo">
+    <div class="todo_title">
+        {{ todo.title }}
+    </div>
+
+    <div class="todo_content">
+        {{ todo.content }}
+    </div>
+
+    <div class="deadline">
+        {{ todo.deadline }}
+    </div>
+
+    <div class="linktag">
+        <a href="{% url 'index'%}">Home</a>
+        <a href="{% url 'edit' todo.pk %}">Edit</a>
+        <a href="{% url 'delete' todo.pk %}">Delete</a>
+    </div>
+
+    <div class="comment">
+        <div class="comment_write">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input type="text" id="content" name="content" placeholder="">
+                <button type="submit" id="submit" name="submit">Comment</button>
+            </form>
+        </div>
+        
+        <div class="comment_list">
+            {% for comment in todo.comments.all %}
+            <li>{{ comment.content }}
+                <a href="{% url 'delete_comment' todo.pk comment.pk %}">X</a>
+            </li>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock main %}

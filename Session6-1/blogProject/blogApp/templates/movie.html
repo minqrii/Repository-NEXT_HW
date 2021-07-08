@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/movie.css'%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topbanner">
+        <h1>Minkyu's Blog</h1> 
+    </div>
+    <div class="contentbox">    
+        <div class="list">
+            <h3>movie</h3>
+            {% for movie in movies %}
+                <ol>
+                    <li>
+                        <a href="{% url 'detail' movie.pk %}">{{ movie.title }}</a>
+                        <p>{{ movie.publish }}</p>
+                    </li>
+                </ol>
+            {% endfor %}
+        </div>
+        <div class="bottom">
+            <a href="{% url 'new' %}" class="write">Write</a>
+            <a href="{% url 'index' %}">Home</a>
+        </div>
+</body>
+</html>

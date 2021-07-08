@@ -1,0 +1,68 @@
+html{
+    background-color: #e7e7de;
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 20px;
+}
+h2{
+    margin: 20px;
+    padding: 10px;
+    font-size: 25px;
+    letter-spacing: 8px;
+}
+h4{
+    letter-spacing: 5px;
+}
+.head{
+    margin: 10px 0px;
+    padding: 10px;
+    text-align: center;
+    color: #e7e7de;
+    font-size: 25px;
+    letter-spacing: 3px;
+    background-color: #0f3057;
+    border: 2px #000000;
+}
+.About-Me p{
+    margin: 10px 500px;
+    padding: 50px 1px;
+    text-align: center;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 3px;
+    border-style: solid;
+    border-width: 3px; 
+    border-color: #0f3057;
+    line-height: 250%;
+}
+.favorite{
+    background-color: #008891;
+    color: #e7e7de;
+    margin: 10px 0px;
+    padding: 20px;
+
+}
+.favorite p{
+    line-height: 250%;
+}
+.experiment{
+    margin: 10px 0px;
+    padding: 50px;
+    color: #e7e7de;
+    font-size: 20px;
+    background-color: #00587a;
+    font-family: 'Teko', sans-serif;
+    line-height: 400%;
+    letter-spacing: 5px;
+}
+.experiment h4{
+    font-size: 25px;
+    font-family: 'Nanum Gothic', sans-serif;;
+}
+.experiment p{
+    font-family: 'Nanum Gothic', sans-serif;;
+}
+img{
+    padding: 10px;
+    background-color: #e7e7de;
+}

@@ -1,0 +1,14 @@
+{% extends base.html %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'new.css' %}">
+{% endblock css %}
+
+<form action="" method="POST">
+    <label for="title">제목</label>
+    <input type="text" id="title" name="title">
+    <label for="content">내용</label>
+    <input type="text" id="content" name="content">
+    <input type="image" id="image" name="image">
+    <button type="submit">글 쓰기</button>
+</form>

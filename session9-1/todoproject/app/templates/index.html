@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'index.css' %}">
+{% endblock css%}
+
+{% block tit %}
+<span>Home.</span> <br>
+<div class="new-tag">
+<a href="{% url 'new'%}">Create New</a>
+{% if user.is_authenticated %}
+<a href="{% url 'mytodo' %}">View My To-Do</a>
+{% endif %}
+</div>
+{% endblock tit %}
+
+{% block main %}
+
+<div class="list_wrapper">
+{% for todo in todos %}
+    <li>
+    <div class="list-item">
+        <a href="{% url 'detail' todo.pk %}">{{ todo.title }}</a>
+        <p><strong>Until</strong>  {{ todo.date_deadline }}</p>
+        <p><strong>D-</strong>{{ todo.remaining }}</p>
+    </div>
+    </li>
+        
+{% endfor %}
+</div>
+
+{% endblock main %}

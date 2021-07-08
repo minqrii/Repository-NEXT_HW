@@ -1,0 +1,17 @@
+.form{
+    width: 414px;
+    height: 736px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    left: 25%;
+    border: solid black 5px;
+}
+
+.title{
+    position: relative;
+    left: 50px;
+}

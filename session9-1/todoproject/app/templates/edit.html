@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'edit.css' %}">
+{% endblock css%}
+
+{% block tit %}
+<span>#{{ todo.pk }}.</span>
+{% endblock tit %}
+
+{% block main %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="todo_title">
+        <label for="title">Title : </label>
+        <input type="text" id="title" name="title" value="{{ todo.title }}">
+    </div>
+    <div class="todo_content">
+        <textarea name="content" id="content" name="content" cols="30" rows="10" value="{{ todo.content }}"></textarea>
+    </div>
+    <div class="todo_deadline">
+        <label for="date_deadline">Deadline : </label>
+        <input type="date" name="date_deadline">
+    </div>
+    <button type="submit">Edit</button>
+</form>
+{% endblock main %}

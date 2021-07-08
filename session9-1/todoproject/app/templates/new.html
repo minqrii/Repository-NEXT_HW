@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'new.css' %}">
+{% endblock css%}
+
+{% block tit %}
+<span>New.</span>
+{% endblock tit %}
+
+{% block main %}
+<div class="post">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="todo_title">
+            <input type="text" id="title" name="title" placeholder="Title">
+        </div>
+        <div class="todo_content">
+            <textarea name="content" onkeyup="counter()" id="content" name="content" placeholder="Content"></textarea>
+        </div>
+        <div class="counter"> <span id="counting"> 0</span>자 (공백 포함)</div>
+        <div class="todo_deadline">
+            <label for="date_deadline">Deadline : </label>
+            <input type="date" name="date_deadline">
+        </div>
+        <button type="submit" id="submit">Create</button>
+    </form>
+
+</div>
+
+<script type="text/javascript">
+    function counter() {
+        document.querySelector('#counting').textContent = document.querySelector('#content').value.length;
+    } 
+</script>
+{% endblock main %}

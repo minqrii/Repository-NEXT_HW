@@ -1,0 +1,26 @@
+{% extends base.html %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'detail.css' %}">
+{% endblock css %}
+
+{% block main %}
+
+<div class="title">
+    {{post.title}}
+</div>
+
+<div class="author">
+    {{post.author}}
+</div>
+
+<div class="content">
+    {{post.content}}
+</div>
+
+<form action="" method="POST">
+    <input type="text" id="comment" name="comment" placeholder="댓글을 입력하세요">
+    <button type="submit">작성</button>
+</form>
+
+{% endblock main %}

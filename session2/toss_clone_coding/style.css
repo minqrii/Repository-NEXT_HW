@@ -1,0 +1,97 @@
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+.navigationbar{
+    width: 1064px;
+    height: 58px;
+    display: flex;
+    padding: 9px 20px;
+    margin: auto;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+span{
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    color: #3b3b46;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px 6px;
+    vertical-align: top;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 75px;
+    margin-top: 30px;
+    padding-left: 450px;
+    padding-right: 450px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+}
+.title{
+    margin-bottom: 45px;
+    font-size: 52px;
+    font-weight: bold;
+    font-stretch:normal;
+    font-style: normal;
+    line-height: 1.35;
+    color: #454f5d;
+
+}
+.text{
+    font-size: 17px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.59;
+    letter-spacing: normal;
+    color: #454f5d;
+    margin-bottom: 20px;
+}
+.titlebanner{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -0.12px;
+    color: #3182f6;
+    line-height: 20px;
+    height: 20px;
+}
+.box{
+    width: 360px;
+    height: 70px;
+    margin-bottom: 12px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 30px 60px 12px rgb(0 0 33 / 5%), 0 4px 24px 0 rgb(0 0 33 / 5%), 0 0 1px 0 rgb(0 0 33 / 9%);
+}
+.box .text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    width: 300px;
+    height: 70px;
+    padding-left: 20px;
+    position: relative;
+    top: 10px;
+    left: -20px;
+    margin-left: 10px;
+}
+.bank{
+    color: #666;
+}
+.number{
+    font-weight: bold;
+}

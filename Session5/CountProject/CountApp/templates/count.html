@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'count.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1>오이...좋아하세요?</h1>
+    <h3>오이를 좋아하는 이유를 적으시오(1000자 내외)</h3>
+    <form action="{% url 'result' %}" method="POST">{% csrf_token %}
+        <textarea name="text" id="" cols="50" rows="20" placeholder="Do You Like Cucumber?"></textarea>
+        <br>
+        <input type="submit" value="오이">
+    </form>
+    <div class="box_wrapper">
+        <img src="https://static.hubzum.zumst.com/hubzum/2018/08/22/13/75000c79b38d4b3aae5021ba94129552.jpg" alt="">
+        <img src="https://lh3.googleusercontent.com/proxy/9JUJj26EXzCsodOFo3i_ktQD9NPNzu-g3vFQrpTzhvm20vZ9glts4LP_fsnoent1Opx_lUD_u6j4m48pbc1DcyKVVz1bYruieGP2GGBvkwg" alt="">
+        <img src="https://i.pinimg.com/736x/5b/c5/7d/5bc57d37480d5a46f2585d9a08b774e1.jpg" alt="">
+        <img src="https://static.hubzum.zumst.com/hubzum/2018/08/22/13/2f5b25a7020549399dde07655db5ddcf.jpg" alt="">
+        <img src="https://previews.123rf.com/images/nordroden/nordroden1307/nordroden130700051/22368921-%EC%98%A4%EC%9D%B4-%EC%9A%94%EB%A6%AC-%EC%86%8C%EC%8B%9C%EC%A7%80%EC%99%80-%EB%A1%A4.jpg" alt="">
+        <img src="https://lh3.googleusercontent.com/proxy/R7qeaMLrOy49NJgC1iUHi9PlHcZp5sChjPA-jslNjh1V6wnwfph3OTIMZnjLBmB2WHW2qdZptDumSRpBlJDcEFAHckH33mLuv-TkDJdAZ6fYGaLxcMgh8l5Zfdsn" alt="">
+    </div>
+</body>
+</html>

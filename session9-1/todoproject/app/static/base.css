@@ -1,0 +1,107 @@
+body{
+    font-family: 'Merriweather', serif;
+}
+.nav-bar{
+    width: auto;
+    height: 25%;
+    background-color: #fed049;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar button{
+    position: relative;
+    left: -8%;
+    border: #fed049;
+    background-color: #fff8e1;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 120%;
+}
+.menu button{
+    cursor: pointer;
+}
+
+.pagetitle{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.pagetitle h1{
+    margin: 5%;
+}
+.address{
+    position: absolute;
+    left: 30%;
+    top: 80px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.login{
+    margin: 13px;
+    border: solid 1px #fff8e1;
+    border-radius: 10%;
+    background-color: #fff8e1;
+    padding: 5px;
+    color: black;
+    font-size: 120%;
+    letter-spacing: 120%;
+}
+.auth-logout{
+    margin: 13px;
+    border: solid 1px #fff8e1;
+    border-radius: 10%;
+    background-color: #fff8e1;
+    padding: 5px;
+    color: black;
+    font-size: 120%;
+    letter-spacing: 120%;
+}
+.signup{
+    margin: 13px;
+    border: solid 1px #fff8e1;
+    border-radius: 10%;
+    background-color: #fff8e1;
+    padding: 5px;
+    color: black;
+    font-size: 120%;
+    letter-spacing: 120%;
+}
+
+.nav-item{
+    margin: 13px;
+    border: solid 1px #fff8e1;
+    border-radius: 10%;
+    background-color: #fff8e1;
+    padding: 5px;
+    color: black;
+    font-size: 120%;
+    letter-spacing: 120%;
+}
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+}
+.tit span{
+    font-size: 360%;
+    font-family: 'Merriweather', serif;
+    opacity: 60%;
+    margin-left: 2%;
+}
+
+.address{
+    display: none;
+}
+
+.address.active{
+    display: flex;
+}

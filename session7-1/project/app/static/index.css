@@ -1,0 +1,14 @@
+.box_wrapper{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.list_title{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.remaining{
+    font-weight: bold;
+    color: red;
+}

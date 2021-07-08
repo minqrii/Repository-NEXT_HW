@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    {% block css %}
+    {% endblock css %}
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav_bar">
+        <div class="logo">
+            <span>logo</span>
+        </div>
+        <div class="menu">
+            <button type="button" class="btn">
+                <span>Menu</span>
+                <div class="menu_bar">
+                    {% if user.is_authenticated %}
+                    <a href="" class="todolist">To-do list</a>
+                    <a href="" class="album">Album</a>
+                    <a href="" class="post">Post</a>
+                    <a href="" class="auth-logout">Logout</a>
+                    {% else %}
+                    <a href="" class="auth-login">Login</a>
+                    <a href="" class="auth-signup">Sign Up</a>
+                    {% endif %}
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    const toggleBtn = document.querySelector(".btn");
+    const menu = document.querySelector(".menu_bar");
+
+    toggleBtn.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+
+    </script>
+
+    <div class="main">
+        {% block main %}
+        
+        {% endblock main %}
+    </div>
+
+    <div class="footer">
+        
+    </div>
+</body>
+</html>

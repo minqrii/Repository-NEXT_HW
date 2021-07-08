@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&display=swap"
+        rel="stylesheet">
+    {% load static %}
+    {% load socialaccount %}
+    {% providers_media_js %}
+
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    {% block css %}
+
+    {% endblock css %}
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="pagetitle">
+            <h1>To Do List</h1>
+            <p>by Minkyu Kim</p>
+        </div>
+        <button type="button" class="Btn">
+            <span class="sr-only">
+                Menu</span>
+        
+            <div class="address">
+                {% if user.is_authenticated %}
+                <a class='auth-user'>Hello! {{ user.username }}.</a>
+                <a class="auth-logout" href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                <a class="login" href="{% url 'login'%}">Login</a>
+                <a class='nav-item' href="{% provider_login_url 'kakao' %}">Kakao Login</a>
+                <a class="signup" href="{% url 'signup' %}">Sign Up</a>
+                {% endif %}
+            </div>
+        </button>
+    </div>
+
+
+
+    <script type="text/javascript">
+        const toggleBtn = document.querySelector(".Btn");
+        const menu = document.querySelector(".address");
+
+        toggleBtn.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
+
+    </div>
+    <div class="main">
+        <div class="tit">
+            {% block tit %}
+
+            {% endblock tit %}
+        </div>
+        {% block main %}
+
+        {% endblock main %}
+    </div>
+    <div class="footer">
+
+    </div>
+</body>
+
+</html>

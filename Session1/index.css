@@ -1,0 +1,15 @@
+*{font-family: 'Noto Sans KR', sans-serif;}
+.introduction{
+    color: gray;
+    font-size: 30px;
+    font-weight: 600;
+}
+#title{
+    color: green;
+    font-size: 50px;
+}
+#list{
+    color: indigo;
+    font-size: 20 px;
+    
+}

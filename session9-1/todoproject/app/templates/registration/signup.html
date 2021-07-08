@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'signup.css '%}">
+{% endblock css%}
+
+{% block tit %}
+<span>Sign Up</span>
+{% endblock tit %}
+
+{% block main %}
+
+{% if error %}
+<h3 style="red">{{ error }}</h3>
+{% endif %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Name">
+    <input type="password" placeholder="Password">
+    <button type="submit">Sign Up</button>
+</form>
+{% endblock main %}

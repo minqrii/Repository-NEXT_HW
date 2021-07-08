@@ -1,0 +1,45 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.topbanner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-size: 150%;
+    letter-spacing: 5px;
+    border-bottom: solid 2px rgb(172, 172, 172);
+}
+.contentbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    width: 80%;
+    height: 800px;
+    position: relative;
+    top: 20px;
+    overflow: auto;
+    background-color: rgb(172, 172, 172);
+    border-right: solid 1px #fff;
+}
+.list h4{
+    text-align: center;
+}
+.list p{
+    font-size: 80%;
+}
+li{
+    border-bottom: solid 1px #fff;
+    padding: 5px 5px;
+}
+.bottom{
+    position: relative;
+    left: 90%;
+    font-size: 120%;
+}

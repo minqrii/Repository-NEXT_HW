@@ -1,0 +1,39 @@
+.todo{
+    font-family: 'Nanum Gothic', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.todo_title{
+    font-size: 180%;
+    background-color: #fed049;
+    width: max-content;
+}
+.todo_content{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.linktag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 110%;
+    color: rgb(172, 172, 172);
+}
+.linktag a{
+    margin: 10%;
+}
+.comment_list{
+    list-style: decimal;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+#content{
+    width: 300px;
+    height: 25px;
+}
+#submit{
+    height: 30px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/new.css'%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topbanner">
+        <h1>Minkyu's Blog</h1> 
+    </div>
+    <div class="contentbox">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input name="title" placeholder="제목을 입력하세요">
+            <select name="category" id="category">
+                <option value="drama">drama</option>
+                <option value="movie">movie</option>
+                <option value="programming">programming</option>
+            </select>
+            <br>
+            <textarea name="content" cols="80" rows="40" placeholder="내용"></textarea>
+            <br>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>

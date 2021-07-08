@@ -1,0 +1,28 @@
+{%extends 'base.html' %}
+{% load static %}
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    {% endblock css %}
+<body>
+    <div class="frame">
+        {% block content %}
+        {% for todo in todos %}
+        <div class="box_wrapper">    
+            <div class="list">
+                <div class="list_title">
+                    <a href="{% url 'detail' todo.pk %}"> {{todo.title}} </a>
+                </div>
+            </div>
+            <div class="list_date">
+                <span><strong>Until</strong></span>  {{ todo.date_deadline }}
+                <span><strong>D-</strong></span>{{ todo.remaining }}
+                <a href="{% url 'edit' todo.pk %}">Edit</a>
+                <a href="{% url 'delete' todo.pk %}">Delete</a>
+            </div>
+        </div>
+        {% endfor %}
+        <a href="{%url 'new' %}">New</a>
+        {% endblock content %}
+    </div>
+</body>
+</html>
