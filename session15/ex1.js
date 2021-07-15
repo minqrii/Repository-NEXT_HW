@@ -14,9 +14,11 @@ $ulElement.addEventListener("click",(e)=>{
 
 function newElement() {
     const inputValue = document.getElementById("myInput") .value;
+    const inputValue2 = document.getElementById("myInput2") .value;
     const $liElement = `
         <li>
-            <span>${inputValue}</span>
+            <span>${inputValue}</span> <br>
+            <span>${inputValue2}</span>
             <span class="close">&#215;</span>
         </li>
     `
@@ -25,7 +27,8 @@ function newElement() {
         alert("You must write something!");
     } else {
         $ulElement.insertAdjacentHTML('beforeend', $liElement);
-        addTodoList('todoList', inputValue)
+        const object = {inputValue, inputValue2}
+        addTodoList('todoList', JSON.stringify(object))
     }
     document.getElementById("myInput").value = "";
 }
@@ -36,7 +39,7 @@ function init() {
     for(let i=0; i<todoList.length; i++){
         $liElement = `
             <li>
-                ${todoList[i]}
+                <span>${todoList[i]}</span>
                 <span class="close">&#215;</span>
             </li>
         `
@@ -49,7 +52,7 @@ function getTodoList(key) {
 }
 
 function addTodoList(key, value) {
-    const todoList = getTodoList(key)
+    const todoList = getTodoList(key);
     return localStorage.setItem(key,[...todoList, value])
 }
 

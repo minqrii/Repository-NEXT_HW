@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>오늘의 날씨</h2>
+  <div class="citybox" id="citybox"></div>
+  <input type="text" name="city" id="city">
+  <button id="submit">search</button>
+
+  <div id="weatherBox"></div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="module" src="./weather.js"></script>
+</body>
+
+<style>
+  body{
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+  input{
+    background-color: #eee;
+    border: 0;
+    width: 30%;
+    height: 20px;
+  }
+  button{
+    border: none;
+    background-color: #eee;
+    height: 20px;
+    width: 10%; 
+  }
+  #weatherBox{
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    margin-top: 5%;
+  }
+  .content{
+    margin: 3%;
+    background-color: #eee;
+    padding: 3%;
+    line-height: 170%;
+  }
+  .citybox{
+    font-size: 120%;
+    font-weight: bold;
+    margin-bottom: 2%;
+  }
+</style>
+
+</html>
